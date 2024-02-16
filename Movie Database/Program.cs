@@ -27,10 +27,10 @@ internal class Program
         while (true)
         {
             Console.WriteLine("What category are you interested in? ");
-            Console.WriteLine(" 1. Animated");
-            Console.WriteLine("2. Drama");
-            Console.WriteLine("3. Horror ");
-            Console.WriteLine("4. SciFi");
+            Console.WriteLine("Animated");
+            Console.WriteLine("Drama");
+            Console.WriteLine("Horror ");
+            Console.WriteLine("SciFi");
             
 
             string userChoice = Console.ReadLine();
@@ -38,12 +38,10 @@ internal class Program
 
 
 
-            List<Movie> animatedMovies = movies.FindAll(x => x.Equals("1. Animated"));
-            List<Movie> dramaMovies = movies.FindAll(x => x.Equals("2. Drama"));
-            List<Movie> horrorMovies = movies.FindAll(x => x.Equals("3. Horror"));
-            List<Movie> sciFiMovies = movies.FindAll(x => x.Equals("4. SciFi"));
+            List<Movie> filteredMovies = movies.FindAll(x => x.Category.Equals(userChoice));
+            
 
-            Console.WriteLine(animatedMovies);
+            Console.WriteLine();
 
 
 
